@@ -1,5 +1,7 @@
 import mongoose from "mongoose";
 
+// Rotas de Consultas 
+
 async function buscarTodosOsLivros(req, res) {
     const livros = await mongoose.model('Book').find();
     res.status(200).json(livros);
@@ -83,3 +85,15 @@ async function buscarPorIdioma(req, res){
         res.status(500).json({message: "Erro ao buscar os livros com esse idioma"})
     }
 }
+
+// Rotas de Inserção
+
+async function criarLivroComCaracteristicasDosAnteriores(params) {
+    
+}
+
+// Rotas de Atualizaçãõ
+
+
+
+// Rotas de Remoção
